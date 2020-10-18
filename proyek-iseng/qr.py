@@ -4,9 +4,7 @@ import pyqrcode
 import os 
 window = Tk()
 window.title("QR Generator")
-
-# the code
-
+# code generating
 def generate():
     if len(subject.get()) != 0:
         global myQr
@@ -21,7 +19,7 @@ def generate():
     except:
         pass
 
-# code passing
+# code showing
 def showCode():
     global photo
     notificationLabel.config(image=photo)
@@ -35,21 +33,21 @@ def save():
         os.makedirs(dir)
     try:
         if len(name.get()) != 0:
-            qrImage = myQr.png(os.path.join(dir, name.get() + ".png"), scale=6)
+            qrImage = QRCode.png(os.path.join(dir, name.get() + ".png"), scale=6)
         else:
             messagebox.showinfo("Error!", "File name can not be empty!")
     except:
         messagebox.showinfo("Error!", "Please generate the code first")
 
-lab1 = Label(window, text="Enter subject", font=("Helvetica", 12))
+lab1 = Label(window, text="Enter Subject", font=("Helvetica", 12))
 lab1.grid(row=0, column=0, sticky=N + S + E + W)
 
 lab2 = Label(window, text="Enter File Name", font=("Helvetica", 12))
 lab2.grid(row=1, column=0, sticky=N + S + E + W)
 
 subject = StringVar()
-subject = Entry(window, textvariable=subject, font=("Helvetica", 12))
-subject.grid(row=1, column=1, sticky=N + S + E + W)
+subjectEntry = Entry(window, textvariable=subject, font=("Helvetica", 12))
+subjectEntry.grid(row=0, column=1, sticky=N + S + E + W)
 
 name = StringVar()
 nameEntry = Entry(window, textvariable=name, font=("Helvetica", 12))
@@ -66,7 +64,7 @@ subLabel.grid(row=3, column=1, sticky=N + S + E + W)
 showButton = Button(window, text="Save as PNG", font=("Helvetica", 12), width=15, command=save)
 showButton.grid(row=1, column=3, sticky=N + S + E + W)
 
-#making responsive layout:
+# making responsive layout:
 totalRows = 3
 totalCols = 3
 for row in range(totalRows + 1):
