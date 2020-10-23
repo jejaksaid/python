@@ -34,7 +34,7 @@ def equalpress():
 		global expression
 
 		# eval function evaluate the expression
-		# and str function convert the result 
+		# and str function convert the result
 		# into string
 		total = str(eval(expression))
 
