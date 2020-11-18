@@ -55,7 +55,7 @@ class snake(object):
         for i, c in enumerate(self.body):
             p = c.pos[:]
             if p in self.turns:
-                turn = self.turns:
+                turn = self.turns
                 c.move(turn[0], turn[1])
                 if i == len(self.body) -1:
                     self.turns.pop(p)
@@ -72,6 +72,13 @@ class snake(object):
 
     def addCube(self):
         pass
+
+    def draw(self, surface):
+        for i, c in enumerate(self, body):
+            if i == 0:
+                c.draw(surface, True)
+            else:
+                c.draw(surface)
 
 def drawGrid(w, rows, surface):
     sizeBtwn = w // rows
