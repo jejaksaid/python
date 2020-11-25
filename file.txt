@@ -2,3 +2,4 @@ said
 ganteng
 123
 easy
+medium
