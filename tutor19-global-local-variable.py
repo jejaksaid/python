@@ -1,6 +1,7 @@
 var = 9
 loop = True
 
+# local
 # def func(x):
 #     newVar = 7
 #     print(loop)
@@ -10,6 +11,8 @@ loop = True
 #     newVar = 5
 #     print(newVar)
 # func(2)
+
+# global
 def func(x):
     global loop
     loop = 7
