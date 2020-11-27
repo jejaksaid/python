@@ -1,12 +1,23 @@
 x = 'string'
 y = 22
 boo = True
+# object
 # print(type(y))
 # print(x.strip('1'))
 # print(x.count('1'))
 # print(boo.count('1')) its wrong
 # print(x.count())
+#
+# def func():
+#     print('hello')
+# func()
 
-def func():
-    print('hello')
-func()
+# class
+class number():
+    def __init__(self):
+        self.var = 22
+
+    def display(self, x):
+        print(x)
+
+num = number(23)
