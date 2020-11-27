@@ -14,10 +14,11 @@ boo = True
 
 # class
 class number():
-    def __init__(self):
+    def __init__(self, num):
         self.var = 22
 
     def display(self, x):
         print(x)
 
-num = number(23)
+num = number(22)
+print(num)
