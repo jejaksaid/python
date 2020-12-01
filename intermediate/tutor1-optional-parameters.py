@@ -41,7 +41,7 @@ class car(object):
         else:
             print("This car is a %s %s from %s." %(self.make, self.model, self.year))
 whip = car('BMW', 'Fusion', 2012, 'New', 0)
-whip.display(True)
+whip.display(False)
 
 
 
