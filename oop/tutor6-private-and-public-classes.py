@@ -1,14 +1,5 @@
-class _Private:
-    def __init__(self, name):
-        self.name = name
+import mod
+from mod import NotPrivate
 
-class NotPrivate:
-    def __init__(self, name):
-        self.name = name
-        self.priv = _Private(name)
-
-    def display(self):
-        print("Hello")
-
-    def display(self):
-        print("Hi")
+test = NotPrivate('said')
+test.display
