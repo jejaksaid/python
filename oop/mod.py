@@ -7,8 +7,8 @@ class NotPrivate:
         self.name = name
         self.priv = _Private(name)
 
-    def display(self):
+    def _display(self):
         print("Hello")
 
     def display(self):
-        print("Hi")
+        print('Hi')
