@@ -16,5 +16,5 @@ class Dog:
         """bark n times"""
         for _ in range(n):
             print("Bark!")
-            
+
 Dog.bark(10)
