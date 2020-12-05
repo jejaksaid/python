@@ -5,4 +5,5 @@ def func(x):
     return func(x**x)
 
 # print (list(map, func, li))
-print([func(x) for x in li if x%2==0])
+print([func(x) for x in li if x%2==0]
+      )
