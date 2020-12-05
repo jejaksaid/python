@@ -6,7 +6,7 @@ class person(object):
 
     @classmethod
     def getPopulation(cls):
-        return cls.populationd
+        return cls.population
 
     @staticmethod
     def isAdult(age):
@@ -15,6 +15,6 @@ class person(object):
     def display(self):
         print(self.name, 'is', self.age, 'years old')
 
-newPerson = person('said', 18)
+newPerson = person('said', 1)
 
-print(person.isAdult(21))
+print(person.isAdult(0))
